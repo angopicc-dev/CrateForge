@@ -1,0 +1,96 @@
+# Each key under "crates" is a crate id - lowercase, used in commands (/crate set vote).
+#
+# Rewards are weighted: chance = weight / (sum of all weights in that crate).
+# The preview menu shows the exact percentage, so players see the real odds.
+#
+# Reward options:
+#   weight:     relative chance (any positive number, decimals allowed)
+#   item:       the item shown in the menus (material, amount, name, lore, enchants, glow, unbreakable)
+#   give-item:  true (default) gives the item itself; false = display only, e.g. for money rewards
+#   commands:   console commands run on win; %player% is replaced with the winner's name
+#   broadcast:  true announces the win to the whole server
+
+crates:
+  vote:
+    display-name: "<green><bold>Vote Crate"
+    key:
+      material: TRIPWIRE_HOOK
+      name: "<green>Vote Key"
+      lore:
+        - "<gray>Right-click a <green>Vote Crate</green> to use."
+    hologram:
+      - "<green><bold>Vote Crate"
+      - "<gray>Right-click to open"
+      - "<dark_gray>Left-click to preview"
+    rewards:
+      iron:
+        weight: 40
+        item:
+          material: IRON_INGOT
+          amount: 16
+      golden-apples:
+        weight: 25
+        item:
+          material: GOLDEN_APPLE
+          amount: 4
+      money:
+        weight: 25
+        give-item: false
+        item:
+          material: GOLD_NUGGET
+          name: "<yellow>$5,000"
+          lore:
+            - "<gray>Deposited straight into your balance."
+        commands:
+          - "eco give %player% 5000"
+      diamonds:
+        weight: 10
+        item:
+          material: DIAMOND
+          amount: 3
+
+  legendary:
+    display-name: "<gold><bold>Legendary Crate"
+    key:
+      material: BLAZE_ROD
+      name: "<gold>Legendary Key"
+      lore:
+        - "<gray>Right-click a <gold>Legendary Crate</gold> to use."
+    hologram:
+      - "<gradient:gold:yellow><bold>Legendary Crate</gradient>"
+      - "<gray>Right-click to open"
+      - "<dark_gray>Left-click to preview"
+    rewards:
+      sunreaver:
+        weight: 2
+        broadcast: true
+        item:
+          material: NETHERITE_SWORD
+          name: "<gradient:gold:yellow><bold>Sunreaver</gradient>"
+          lore:
+            - "<gray>Forged in the heart of a dying star."
+          enchants:
+            sharpness: 6
+            fire_aspect: 2
+            unbreaking: 3
+      spawner:
+        weight: 3
+        broadcast: true
+        item:
+          material: SPAWNER
+          name: "<light_purple>Mystery Spawner"
+      netherite:
+        weight: 15
+        item:
+          material: NETHERITE_INGOT
+          amount: 2
+      god-apple:
+        weight: 20
+        item:
+          material: ENCHANTED_GOLDEN_APPLE
+      emeralds:
+        weight: 60
+        item:
+          material: EMERALD_BLOCK
+          amount: 8
+          glow: true

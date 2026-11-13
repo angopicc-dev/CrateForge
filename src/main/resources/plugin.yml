@@ -1,0 +1,20 @@
+name: CrateForge
+version: '${version}'
+main: dev.angopiccDev.crateforge.CrateForgePlugin
+api-version: '1.21'
+description: Weighted crates with physical keys, a spin animation, reward previews and holograms.
+author: angopiccDev
+
+commands:
+  crate:
+    description: CrateForge admin commands.
+    usage: /crate <set|remove|givekey|list|reload>
+    aliases: [crates, cf]
+
+permissions:
+  crateforge.admin:
+    description: Use every /crate admin command.
+    default: op
+  crateforge.use:
+    description: Open and preview crates.
+    default: true

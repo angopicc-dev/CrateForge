@@ -1,0 +1,40 @@
+# CrateForge - general settings and messages.
+# All text uses MiniMessage: https://docs.advntr.dev/minimessage/format.html
+# Crates themselves live in crates.yml. Apply changes with /crate reload.
+
+spin:
+  # How many times the reel moves before it stops. Higher = longer spin.
+  shifts: 40
+  # Slowest delay (in ticks) between moves, reached at the very end of the spin.
+  max-delay: 8
+  # Ticks the result stays on screen before the menu closes (20 ticks = 1 second).
+  close-delay: 40
+
+hologram:
+  enabled: true
+  # Height of the hologram above the crate block, in blocks.
+  height: 1.6
+
+messages:
+  prefix: "<dark_gray>[<gold>Crates</gold>]</dark_gray> "
+  no-permission: "<red>You don't have permission to do that."
+  players-only: "<red>Only players can use this."
+  no-key: "<red>You need a key for <crate><red> to open it. <gray>Left-click the crate to preview rewards."
+  already-opening: "<red>You're already opening a crate."
+  inventory-full: "<yellow>Your inventory was full, so some items were dropped at your feet."
+  won: "<gray>You won <reward><gray> from <crate><gray>!"
+  broadcast: "<gold><player></gold><gray> won <reward><gray> from <crate><gray>!"
+  key-given: "<green>Gave <amount>x <crate><green> key to <player>."
+  key-received: "<green>You received <amount>x <crate><green> key."
+  crate-set: "<green>This block is now a <crate><green>."
+  crate-removed: "<green>Crate removed."
+  not-a-crate: "<red>That block isn't a crate."
+  look-at-block: "<red>Look at a block within 5 blocks."
+  unknown-crate: "<red>There's no crate called '<id>'. See <white>/crate list</white>."
+  unknown-player: "<red>Player '<name>' isn't online."
+  bad-amount: "<red>'<input>' isn't a valid amount."
+  reloaded: "<green>Reloaded <count> crate(s)."
+  break-protected: "<red>This is a crate. Remove it with <white>/crate remove</white> first."
+  list-header: "<gold>Crates:"
+  list-entry: " <gray>- <white><id></white> <dark_gray>(<rewards> rewards, <placed> placed)"
+  usage: '<gray>Usage: <white>/crate set \<crate></white>, <white>/crate remove</white>, <white>/crate givekey \<player|all> \<crate> [amount]</white>, <white>/crate list</white>, <white>/crate reload</white>'
