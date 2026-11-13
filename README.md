@@ -2,7 +2,8 @@
 
 Weighted reward crates for Paper servers: physical keys, an animated spin menu, a preview menu showing the exact odds, and holograms with no extra plugin. It's configured in YAML and has no dependencies.
 
-> _Demo GIF goes here — right-click a crate, watch the reel spin, win._
+<img width="540" height="226" alt="image" src="https://github.com/user-attachments/assets/645dccfb-3785-4816-86e4-7bc7e9ed9bfd" />
+
 
 ## Features
 
